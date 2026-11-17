@@ -1,0 +1,58 @@
+# Quartus generated files
+*.qws
+*.qpf
+*.qsf
+*.sopcinfo
+*.sof
+*.pof
+*.jic
+*.rbf
+*.svf
+*.cdf
+*.jam
+*.jbc
+*.hex
+*.tbl
+*.done
+*.cmp
+*.smsg
+*.summary
+*.sta.rpt
+*.fit.rpt
+*.map.rpt
+*.tan.rpt
+*.asm.rpt
+*.pin
+*.sip
+*.spd
+*.sld
+*.tcl
+*.bak
+*.backup
+
+# Incremental compilation
+incremental_db/
+db/
+
+# Simulation files
+simulation/
+modelsim.ini
+vsim.wlf
+transcript
+
+# Generated HDL
+output_files/
+greybox_tmp/
+hc_output/
+
+# IDE files
+.cproject
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
