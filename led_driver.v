@@ -12,7 +12,7 @@ module led_driver (
 			slow_counter <= 0;
          leds <= 4'b0000;
 		end else begin
-			slow_counter <= clow_counter +1;
+			slow_counter <= slow_counter +1;
 			
 			case(mode)
 				2'b00: begin//бегущий огонь
@@ -20,12 +20,16 @@ module led_driver (
 				end
 		
 				2'b01: begin //(мигание всех)
-					leds<= 4'b1111* slow_counter[21];//пробуем
+					leds<= {4{slow_counter[21]}};//пробуем
 				end
-				
+				2'b10: begin//статика шахматная
+					leds<= 4'b0101;
+				end
 				
 				
 				
 			endcase
 		end
 	end
+	
+endmodule 

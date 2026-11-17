@@ -6,7 +6,7 @@ module fsm_controller (
 );
 	localparam MODE_RUNNER = 2'b00; // бегущий огонь
 	localparam MODE_BLINK  = 2'b01; // мигание
-	localparam MODE_STATIC = 2'b10; // статика
+	localparam MODE_STATIC = 2'b10; // статика шахматная 
 	
 	always @(posedge clk or negedge rst_n) begin
 		if (!rst_n) begin //сброс

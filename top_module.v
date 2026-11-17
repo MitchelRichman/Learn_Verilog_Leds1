@@ -2,7 +2,7 @@ module top_module(   //входы выходы
 	input wire clk,
 	input wire rst_n,
 	input wire mode_btn,
-	output reg [3:0] leds
+	output wire [3:0] leds
 );
 
 	wire w_pulse;
@@ -25,9 +25,18 @@ module top_module(   //входы выходы
       .pulse(w_pulse),      // пульс берем
       .current_state(w_state) // номер режима (какой режим из)
 	);
-
+	//LED LOGIC - логика светодоидов 
+	
+	led_driver u_led(
+		.clk(clk),
+		.rst_n(rst_n),
+		.mode(w_state),
+		.leds(leds)
+	
+	);
+	
 endmodule
-//LED LOGIC - логика светодоидов 
+
 
 
 
