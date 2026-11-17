@@ -19,7 +19,12 @@ module top_module(   //входы выходы
 		
 	);
 	//FSM конечный автомат
-
+	fsm_controller u_fsm(
+		.clk(clk),
+		.rst_n(rst_n),
+      .pulse(w_pulse),      // пульс берем
+      .current_state(w_state) // номер режима (какой режим из)
+	);
 
 endmodule
 //LED LOGIC - логика светодоидов 
